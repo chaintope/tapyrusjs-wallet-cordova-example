@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src gap: 'unsafe-inline' *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" href="css/index.css">
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <style>
+            html, body {
+                overflow: hidden;
+                position: fixed;
+                height:100%;
+            }
+            .main {
+                overflow: scroll;
+                height:100%;
+            }
+        </style>
+        <meta name="color-scheme" content="light dark">
+        <title>Tapyrus Wallet</title>
+    </head>
+    <body>
+        <header class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="#!" class="brand-logo">Wallet</a>
+                </div>
+            </nav>
+        </header>
+        <div class="main content">
+            <div class="container">
+                <div class="row card">
+                    <div class="card-content">
+                        <label class="card-title">Import extended private key</label>
+                        <div><input type="text" id="extendedPrivateKey" /></div>
+                        <button id="import" class="btn">import extended private key</button>
+                    </div>
+                </div>
+                <div class="row card">
+                    <div class="card-content">
+                        <label class="card-title">Import private key from wif format</label>
+                        <input type="text" id="wif" /> <br/>
+                        <button id="importwif" class="btn">import wif</button>
+                    </div>
+                </div>
+                <div class="row card">
+                    <div class="card-content">
+                        <label class="card-title">Update Utxos</label> <br/>
+                        <button id="update" class="btn">update</button>
+                    </div>
+                </div>
+                <div class="row card">
+                    <div class="card-content">
+                        <label class="card-title">Balance(TPC)</label> <br/>
+                        <button id="uncoloredbalance" class="btn">uncoloredbalance</button>
+                    </div>
+                </div>
+                <div class="row card">
+                    <div class="card-content">
+                        <label class="card-title">Balance(Colored Coin)</label>
+                        <input type="text" id="balanceColorId" value="c1d8bd1c5009f9dc9935655c4d60ff35f43d65ecdc3d36c7e0d0722feb0cd0a347"/>
+                        <button id="coloredbalance" class="btn">coloredbalance</button>
+                    </div>
+                </div>
+                <div class="row card">
+                    <div class="card-content">
+                        <label class="card-title">Send TPC</label>
+                        <input type="text" id="sendAddress" value="1CizHx2hHTngMCyi7twxTWkgE3rySvkBvU" />
+                        <input type="text" id="sendAmount" value="10000" />
+                        <button id="send" class="btn">send</button>
+                    </div>
+                </div>
+                <div class="row card">
+                    <div class="card-content">
+                        <label class="card-title">Transfer Coin</label>
+                        <input type="text" id="transferColorId" value="c1d8bd1c5009f9dc9935655c4d60ff35f43d65ecdc3d36c7e0d0722feb0cd0a347" />
+                        <input type="text" id="transferAddress" value="1CizHx2hHTngMCyi7twxTWkgE3rySvkBvU" />
+                        <input type="text" id="transferAmount" value="1" />
+                        <button id="transfer" class="btn">transfer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+        <script src="cordova.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <script src="js/index.bundle.js"></script>
+    </body>
+</html>
