@@ -22,6 +22,7 @@
     "webpack-cli": "^4.1.0"
   },
   "devDependencies": {
+    "cordova-android": "^9.0.0",
     "cordova-browser": "^6.0.0",
     "cordova-ios": "^6.1.1",
     "cordova-plugin-secure-key-store": "^1.5.5",
@@ -36,7 +37,8 @@
     },
     "platforms": [
       "browser",
-      "ios"
+      "ios",
+      "android"
     ]
   }
 }
