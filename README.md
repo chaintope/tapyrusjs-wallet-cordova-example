@@ -27,7 +27,7 @@ https://cordova.apache.org/#getstarted を参照。
 ### アプリのビルド
 
 ```
-npm run buld
+npm run build
 ```
 
 
